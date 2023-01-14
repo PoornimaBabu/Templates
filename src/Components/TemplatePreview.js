@@ -12,7 +12,7 @@ export default function TemplatePreview() {
   console.log('url', url)
 
  useEffect(()=> {
-  let actualPreview = url.split('/templatepreview/')[1]
+  let actualPreview = decodeURI(url.split('/templatepreview/')[1]) 
   let tsrt = JSON.parse(localStorage.getItem(actualPreview))
   if(actualPreview !== '' && actualPreview !== undefined){
     setCurrentTemplate(Object.values(tsrt)[0])
