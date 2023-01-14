@@ -10,13 +10,13 @@ export default function TemplatePreview() {
   let url = location.pathname
 
 
- useEffect(()=> {
-  let actualPreview = url.split('/templatepreview/')[1]
-  let tsrt = JSON.parse(localStorage.getItem(actualPreview))
-  if(actualPreview !== ''){
-    setCurrentTemplate(Object.values(tsrt)[0])
-  }
- }, [location.pathname])
+//  useEffect(()=> {
+//   let actualPreview = url.split('/templatepreview/')[1]
+//   let tsrt = JSON.parse(localStorage.getItem(actualPreview))
+//   if(actualPreview !== ''){
+//     setCurrentTemplate(Object.values(tsrt)[0])
+//   }
+//  }, [location.pathname])
 
 
 
